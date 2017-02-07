@@ -47,11 +47,24 @@ header > img {
 .email {
     color: white;
     text-align: center;
+    border: 2px solid white;
+    padding: 3vw;
+    margin: 3vw;
 }
 
-.fa fa-arrow-right {
-    margin-left: 3vw;
+.email i {
+    margin-left: 4vw;
 }
+
+/*button {
+    color: white;
+   background-color: rgba(9, 60, 255, .9);
+    border: 1px solid white; 
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+}*/
 
 main {
     flex: 1;
