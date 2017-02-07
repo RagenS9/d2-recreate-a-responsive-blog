@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+    
+header {
+    background-color: rgba(9, 60, 255, .9);
+    text-align: center;
+    padding: 15vw 3vw;
+    /*height: 450px;*/
+}
+    
+header > img {
+    border-radius: 50%;
+    height: 63vw;
+    width: 63vw;
+    padding: 5vw;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.hello {
+    font-size: 3vw;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cam {
+    font-size: 5.6vw;
+    font-weight: 600;
+    /*text-shadow: 0px 1px 1px black;*/
+    color: white;
+}
+
+.cam > span {
+    font-weight: 200;
+}
+
+.email {
+    color: white;
+    text-align: center;
+}
+
+.fa fa-arrow-right {
+    margin-left: 3vw;
+}
+
+main {
+    flex: 1;
+}

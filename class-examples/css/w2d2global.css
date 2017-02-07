@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+header {
+    display: none;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+/*flex-direction: column turns everything on its side.*/
+
+.column {
+    flex: 1;
+}
+
+.field {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+}
+
+.field input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+}
+
+/*phablet*/
+/*only put in properties that you want to change. so don't have to copy all of the code. . .  only what you need to change. like here, we need to change the layout of the row to side by side, so changed the flex-direction, but not the fact that it's still flexing.*/
+
+@media all and (min-width: 544px) {
+        header {
+        display: block;
+        /*since said display none for mobile, have to add display: block to show the photo again.*/
+        background: url(https://unsplash.it/600?random);
+        background-size: cover;
+        /*this background-size cover thing is new for responsive. this makes sure that no matter how big the device is, the cover image fills it.  Don't need to use background-cover no repeat with it. */
+        /*height: 200px;*/
+        /*can set with specific pixels, but that changes the view of the image itself and isn't good for mobile devices.*/
+        background-position: 50% 50%;
+        /*this will center the image so it's not just the top of the image. if you want to do top right bottom left or just top/bottom right/left*/
+        /*if want to control the height of the image, use vw for viewport width. If it HAS to be 200px high, then use the hard code. He likes keeping things responsive, so tends to vs as much as possible. */
+        /*height: 20vw;*/
+        /*can use padding so that content will stay center. if you use height, it would push the text down as you change device size. Avoid using fixed height. It breaks stuff. Use padding instead. */
+        padding: 15vw 0;
+        text-align: center;
+    }
+
+    header h1 {
+        color: white;
+        margin: 0;
+        text-shadow: 0 0 3px black;
+        margin: 0;
+        font-size: 10vw;
+    }
+    .row {
+        flex-direction: row;
+    }
+}
+
+/*tablet*/
+/*each later thing layers on top of the previous ones, so you might not have much left for desktop or tablet. you've probably done most of the heavy lifting at that point, and just make minor tweaks. */
+@media all and (min-width: 767px) {
+   
+}
+
+
+
+/*.box {
+    background: red;
+    box-shadow: 10px 10px 10px gray;
+    width: 200px;
+    height: 200px;
+}*/
+
+/*Phablet*/
+/*@media screen and (min-width: 500px) {
+    .box{
+        background: blue;
+        width: 400px;
+        height: 400px;
+    }
+}*/
+/*this is a media call. @media, what kind of device, so here, screen.  Could also say print for printers. wouldn't need size for printer. can get rid of all of the ads and menu and stuff so that just the article prints.
+the normal way is media screen and (mid-width: bbpx) where you put the breakpoints in the bb.
+Then make rules in the curlies. So in this case, the big screen is going to be red, but the small screen is going to be blue. but either way, you still get the box shadow.
+repeat all of the styles or have new classes or styles within the media curlies brackets.
+ */
