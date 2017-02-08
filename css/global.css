@@ -6,7 +6,7 @@ img {
 }
 
 body {
-    max-width: 960px;
+    /*max-width: 960px;*/
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -15,57 +15,125 @@ body {
 header {
     background-color: rgba(9, 60, 255, .9);
     text-align: center;
-    padding: 15vw 3vw;
-    /*height: 450px;*/
+    padding: 10vw 0vw 3vw 0vw;
 }
     
 header > img {
     border-radius: 50%;
-    height: 63vw;
     width: 63vw;
     padding: 5vw;
     max-width: 300px;
-    max-height: 300px;
 }
 
 .hello {
-    font-size: 3vw;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
+    margin-top: 5vw;
 }
 
 .cam {
-    font-size: 5.6vw;
+    font-size: 18px;
     font-weight: 600;
-    /*text-shadow: 0px 1px 1px black;*/
     color: white;
+    padding: 5vw 3vw 3vw 3vw;
 }
 
 .cam > span {
     font-weight: 200;
 }
 
-.email {
+button {
     color: white;
-    text-align: center;
+    text-align: left;
+    border-radius: 2px;
+    background-color: transparent;
     border: 2px solid white;
-    padding: 3vw;
-    margin: 3vw;
+    padding: 15px 7px 15px 7px;
+    margin: 20px;
+    font-size: 14px;
 }
 
 .email i {
-    margin-left: 4vw;
+    margin-left: 80px;
 }
 
-/*button {
+.icons {
+    display: flex;
+    flex-direction: row;
     color: white;
-   background-color: rgba(9, 60, 255, .9);
-    border: 1px solid white; 
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-right: 15px;
-    padding-left: 15px;
-}*/
+    font-size: 9px;
+}
+
+/*tried to make a span to make the text for the kitchener icon different size and weight, but it wouldn't work, so removed it. */
+
+.icon-kitchener {
+    flex: 1;
+}
+
+.icon-social {
+    flex: 1;
+}
 
 main {
     flex: 1;
+    padding: 0vw 10vw 10vw 10vw;
+    font-size: 14px;
+    line-height: 175%;
+}
+
+h1 {
+    color: rgba(9, 60, 255, .9);
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+p {
+    color: rgba(0, 0, 0, .7);
+}
+
+.websites {
+    font-weight: bold;
+}
+
+.websites > span {
+    color: rgba(9, 60, 255, .9);
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h2 > span {
+    color: rgba(9, 60, 255, .9);
+    margin-left: 5vw;
+}
+
+/*tablet*/
+
+@media all and (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+    
+}
+
+/*desktop*/
+/*CSS checker says that there is no above. I've googled several sites, and none will tell me how to set this. I didn't find anything obvious in the resources for front end. And you didn't cover how to do anything except min-width in class, so there's not much I can do at this point but turn it in. */
+
+@media all and (above: 768px) {
+    .bio {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bio > h1 {
+        flex: 2;
+    }
+
+    .description {
+        flex: 10;
+        max-width: 400px;
+    }
+
 }
