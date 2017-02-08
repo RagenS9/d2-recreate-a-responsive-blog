@@ -121,7 +121,7 @@ h2 > span {
 /*desktop*/
 /*CSS checker says that there is no above. I've googled several sites, and none will tell me how to set this. I didn't find anything obvious in the resources for front end. And you didn't cover how to do anything except min-width in class, so there's not much I can do at this point but turn it in. */
 
-@media all and (above: 768px) {
+@media all and (min-width: 2000px) {
     .bio {
         display: flex;
         flex-direction: row;
